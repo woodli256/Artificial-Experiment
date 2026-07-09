@@ -1,51 +1,48 @@
-📖 仓库简介
-本仓库存放机器学习课程所有课堂实验与期末独立大作业，完整覆盖线性分类、降维聚类、真实场景分类建模三大模块，所有代码基于 scikit-learn 实现，配套官方课件、实验报告文档、数据集与可视化绘图代码，可直接复现全部实验结果。
-## 📂 仓库目录结构
-Artificial-Experiment/
-├── README.md
-├── 机器学习实验1/        # 实验一：线性分类器（LR/LDA/LinearSVC）
-│   ├── 实验1.ipynb
-│   ├── 实验报告1.docx
-│   └── 机器学习实验一线性分类器（2026修订版）gc.pdf
-├── 机器学习实验2/        # 实验二：PCA降维 + KMeans / DBSCAN聚类
-│   ├── 机器学习实验2.ipynb
-│   ├── 机器学习课程实验二.docx
-│   └── 机器学习实验二降维及聚类（2026修订版）gc.pdf
-└── 大作业/               # 期末课程大作业：武汉大学食堂选择二分类预测
-    ├── 机器学习期末课程大作业任务书.docx
-    ├── 实验代码.ipynb
-    ├── 数据集.csv
-    ├── 实验图表/
-    └── 期末课程报告.docx
+# Artificial-Experiment
 
-🧰 环境依赖
-统一使用 Python 3.7+，
-📝 各模块内容说明
-1. 机器学习实验 1｜线性分类器
-核心模型：逻辑回归 LR、线性判别分析 LDA、线性 SVM、朴素贝叶斯
-实验任务
-生成二分类模拟数据集并可视化
-数据集划分训练 / 测试集，实现 K 折交叉验证、留一法
-训练多种线性分类器，绘制决策边界
-计算精确率、召回率、F1 分数，绘制 ROC 曲线与 AUC
-交付文件：课件 PDF、完整可运行 ipynb 代码、实验报告 Word
-2. 机器学习实验 2｜降维与聚类
-核心算法：PCA 三维降维、K-Means、DBSCAN 密度聚类
-实验任务
-make_blobs 生成多簇高维数据集
-PCA 将 8 维特征降至 3 维并 3D 可视化
-K-Means 调聚类数量，绘制聚类中心
-DBSCAN 调节 eps、min_samples 观察密度聚类效果
-聚类评估：FMI、RI 外部指标、DBI 内部指标
-交付文件：课件 PDF、3D 绘图完整代码、实验报告 Word
-3. 期末课程大作业｜武汉大学食堂选择预测（个人独立项目）
-任务类型：二分类预测（是否选择目标食堂）
-数据集：whu_canteen_choice_simulated_dataset_修订版.csv（教学模拟数据）
-完整流程要求
-使用学号后两位作为随机种子抽取 80% 个人子集，分层划分训练 / 测试集
-数据探索可视化、缺失值 / 类别特征编码预处理
-至少 2 种分类模型对比（逻辑回归 / 决策树 / 随机森林 / KNN）
-混淆矩阵、Accuracy/Precision/Recall/F1 模型评价
-错误样本分析、特征消融实验、参数调优 / 交叉验证
-基础模型原理推导、模型局限与改进方案
-交付文件：任务书、完整代码、数据集、实验图表、3000–4500 字课程报告
+## 📖 仓库简介
+本仓库存放机器学习课程所有课堂实验与期末独立大作业，完整覆盖**线性分类、降维聚类、真实场景分类建模**三大模块，所有代码基于 `scikit-learn` 实现，配套官方课件、实验报告文档、数据集与可视化绘图代码，可直接复现全部实验结果。
+
+## 📂 仓库目录结构
+
+### 可视化层级框图
+```mermaid
+graph TD
+    root["Artificial-Experiment/仓库根目录"]
+    readme["README.md 说明文档"]
+    
+    exp1["机器学习实验1<br/>线性分类实验"]
+    exp1_code["实验代码.ipynb"]
+    exp1_report["实验报告.docx"]
+    exp1_pdf["配套课件PDF"]
+
+    exp2["机器学习实验2<br/>降维聚类实验"]
+    exp2_code["实验代码.ipynb"]
+    exp2_report["实验报告.docx"]
+    exp2_pdf["配套课件PDF"]
+
+    final["期末大作业<br/>食堂选择预测建模"]
+    final_task["大作业任务书"]
+    final_code["完整建模代码"]
+    final_data["模拟数据集.csv"]
+    final_img["输出图表文件夹"]
+    final_report["期末完整报告"]
+
+    root --> readme
+    root --> exp1
+    root --> exp2
+    root --> final
+
+    exp1 --> exp1_code
+    exp1 --> exp1_report
+    exp1 --> exp1_pdf
+
+    exp2 --> exp2_code
+    exp2 --> exp2_report
+    exp2 --> exp2_pdf
+
+    final --> final_task
+    final --> final_code
+    final --> final_data
+    final --> final_img
+    final --> final_report
