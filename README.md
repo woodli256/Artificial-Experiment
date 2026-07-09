@@ -6,43 +6,35 @@
 ## 📂 仓库目录结构
 
 ### 可视化层级框图
-```mermaid
-graph TD
-    root["Artificial-Experiment/仓库根目录"]
-    readme["README.md 说明文档"]
+
+Artificial-Experiment/
+
+├── README.md
+
+├── 机器学习实验1/        # 实验一：线性分类器（LR/LDA/LinearSVC）
+
+│   ├── 实验1.ipynb
+
+│   ├── 实验报告1.docx
+
+│   └── 机器学习实验一线性分类器（2026修订版）gc.pdf
+
+├── 机器学习实验2/        # 实验二：PCA降维 + KMeans / DBSCAN聚类
+
+│   ├── 机器学习实验2.ipynb
+
+│   ├── 机器学习课程实验二.docx
+
+│   └── 机器学习实验二降维及聚类（2026修订版）gc.pdf
+
+└── 大作业/               # 期末课程大作业：武汉大学食堂选择二分类预测
+
+    ├── 机器学习期末课程大作业任务书.docx
     
-    exp1["机器学习实验1<br/>线性分类实验"]
-    exp1_code["实验代码.ipynb"]
-    exp1_report["实验报告.docx"]
-    exp1_pdf["配套课件PDF"]
-
-    exp2["机器学习实验2<br/>降维聚类实验"]
-    exp2_code["实验代码.ipynb"]
-    exp2_report["实验报告.docx"]
-    exp2_pdf["配套课件PDF"]
-
-    final["期末大作业<br/>食堂选择预测建模"]
-    final_task["大作业任务书"]
-    final_code["完整建模代码"]
-    final_data["模拟数据集.csv"]
-    final_img["输出图表文件夹"]
-    final_report["期末完整报告"]
-
-    root --> readme
-    root --> exp1
-    root --> exp2
-    root --> final
-
-    exp1 --> exp1_code
-    exp1 --> exp1_report
-    exp1 --> exp1_pdf
-
-    exp2 --> exp2_code
-    exp2 --> exp2_report
-    exp2 --> exp2_pdf
-
-    final --> final_task
-    final --> final_code
-    final --> final_data
-    final --> final_img
-    final --> final_report
+    ├── 实验代码.ipynb
+    
+    ├── 数据集.csv
+    
+    ├── 实验图表/
+    
+    └── 期末课程报告.docx
