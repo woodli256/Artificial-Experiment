@@ -1,0 +1,22 @@
+﻿字段名,中文含义,类型,说明
+sample_id,样本编号,文本,每一行表示“一个学生情境 + 一个候选食堂”的选择样本；仅用于样本标识，一般不作为模型特征。
+student_area,学生所在片区,类别,文理学部/工学部/信息学部/医学部。
+candidate_canteen,候选食堂,类别,待判断是否选择的食堂名称。
+canteen_area,食堂所在片区,类别,候选食堂所在学部或片区。
+canteen_type,食堂类型,类别,学生大伙食堂/风味食堂/商业或风味餐饮/清真特色等。
+meal_time,用餐时段,类别,breakfast/lunch/dinner。
+weekday,星期,整数,1~7，6和7为周末。
+is_weekend,是否周末,二值,0=工作日，1=周末。
+weather,天气,类别,sunny/cloudy/rainy/hot/cold。
+course_pressure,课程压力,整数,1~5，值越大表示当天学习任务越重。
+time_pressure,时间紧张程度,整数,1~5，值越大表示越赶时间。
+hungry_level,饥饿程度,整数,1~5，值越大表示越饿。
+budget,餐费预算,数值,单位：元。
+distance_level,距离等级,整数,1~5，值越大表示距离越远。
+queue_level,排队等级,整数,1~5，值越大表示排队越久。
+taste_diversity,风味丰富度,整数,1~5，值越大表示选择越丰富。
+price_level,价格等级,整数,1~5，值越大表示价格越高。
+visitor_flow,游客/外来人流影响,整数,1~5，值越大表示外来人流影响越明显。
+public_open,是否更偏对公众开放,二值,0=主要面向校内，1=风味/商业餐饮对公众更友好。
+online_reputation_score,网络口碑模拟分,数值,1~5，基于公开描述和教学规则生成的课堂变量；不代表任何食堂真实排名、真实评价或经营情况判断。
+choose_canteen,是否选择候选食堂,标签,0=不选择，1=选择；二分类模型预测目标。
